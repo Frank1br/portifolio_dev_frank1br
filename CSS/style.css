@@ -425,7 +425,15 @@ footer{
         display: block;
         font-size: 1.2rem;
         margin: 0.5rem 0;
+        transition: 0.3s ease;
     }
+
+    /* Estilo de hover para os links dentro da navegação responsiva */
+.nav-responsive a:hover {
+    color: var(--main-color); /* Cor ao passar o mouse */
+    transition: 0.3s ease; /* Transição suave */
+}
+
 
     section {
         padding: 6rem 2.5rem;
