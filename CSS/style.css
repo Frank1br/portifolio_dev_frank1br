@@ -344,6 +344,7 @@ footer{
 }
 
 /* menu hamburguer */
+
 .menu-hamburguer{
     display: none;
     cursor: pointer;
@@ -355,18 +356,9 @@ footer{
     background-color: var(--text-color);
     margin: 0.4rem 0;
     transition: 0,3s ease;
-    
 }
 
-.change, .bar1 {
-    transform: translate(0, 0.65rem) rotate(-45deg);
-}
-.change, .bar2 {
-    opacity: 0;
-}
-.change, .bar3 {
-    transform: translate(0, -0.65rem) rotate(45deg);
-}
+
 
 .nav-responsive{
     display: none;
