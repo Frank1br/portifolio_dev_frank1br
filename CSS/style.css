@@ -374,10 +374,15 @@ footer{
         display: none;
     }
 
-    .header{
+    header{
         background-color: var(--color-01); /*TEST*/
     }
 }
 
 /* Small (sm): Smartphone (Landscape) */
 
+@media (min-width: 576px) {
+    header{
+        background-color: var(--color-02); /*TEST*/
+    }
+}
