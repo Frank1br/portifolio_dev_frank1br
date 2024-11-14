@@ -123,7 +123,11 @@ span{
 }
 
 .home-img img, .about-img img{
+    display: block; /* Remove espaçamento causado por inline elements */
     width: 100%;
+    height: auto;
+    margin: 0; /* Remove possíveis margens */
+    padding: 0; /* Remove possíveis paddings */
 }
 
 .services h2,
@@ -363,7 +367,28 @@ footer{
 .change, .bar3 {
     transform: translate(0, -0.65rem) rotate(45deg);
 }
+
+.nav-responsive{
+    display: none;
+}
 /* menu hamburguer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Extra Small (xs): Smartphone (portrait) */
 
@@ -391,9 +416,10 @@ footer{
         gap: 1.2rem;
     }
 
-    .home img, .about img {
+    .home-img, .about-img {
         width: 80%;
         max-width: 80%;
+        margin: 0 auto;
     }
 
     .home-content, .about-content {
@@ -427,6 +453,17 @@ footer{
 /* Small (sm): Smartphone (Landscape) */
 
 @media (min-width: 576px) {
+
+    .home-img, .about-img {
+        width: 65%;
+        max-width: 65%;
+        margin: 0 auto;
+    }
+
+    .services-box {
+        width: 70%;
+    }
+
     header{
         background-color: var(--color-02); /*TEST*/
     }
@@ -435,6 +472,51 @@ footer{
 /* Medium (md): Tablet */
 
 @media (min-width: 768px) {
+
+    
+
+    .menu-hamburguer{
+        display: none;
+    }
+
+    img {
+        border: 1px solid green;
+    }
+
+    .nav{
+        display: block;
+    }
+
+    .nav-responsive, .nav-responsive a {
+        display: none;
+    }
+
+    .home, .about {
+        flex-direction: row ;
+        justify-content: space-evenly;
+    }
+
+    .home-img, .about-img {
+        max-width: 35%;
+    }
+
+    .home-content, .about-content {
+        width: 50%;
+    }
+
+    .services-box{
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+
+    .portifolio-container{
+        grid-template-columns: auto auto;
+    }
+
+    form .input-box input {
+        width: 49%;
+    }
+
     header{
         background-color: var(--color-03); /*TEST*/
     }
@@ -442,6 +524,12 @@ footer{
 
 /* Large (lg): Laptop */
 @media (min-width: 992px) {
+    .services-container{
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+
+
     header{
         background-color: var(--color-04); /*TEST*/
     }
@@ -449,7 +537,23 @@ footer{
 /*Extra large (XL): Desktop  */
 
 @media (min-width: 1200px) {
+    .home-img, .about-img {
+        max-width: 25%;
+    }
+
+    .home-content h1 {
+        font-size: 2.7rem;
+    }
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .portifolio-container {
+        grid-template-columns: auto auto auto;
+    }
+
     header{
         background-color: var(--color-05); /*TEST*/
     }
 }
+
