@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "express": "^4.21.1",
-    "node": "^18.20.5",
-    "nodemailer": "^6.9.16"
-  }
-}
