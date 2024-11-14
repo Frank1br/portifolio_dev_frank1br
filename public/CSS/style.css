@@ -516,7 +516,9 @@ footer{
     .home-content, .about-content {
         width: 50%;
     }
-
+    .about-content {
+        padding-right: 3rem;
+    }
     .services-box {
         width: 60%;
         margin-bottom: 2rem;
