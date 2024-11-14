@@ -56,7 +56,21 @@ header{
     cursor: default;
 }
 
-.nav a {
+.nav-responsive{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--bg-color-01);
+}
+
+.nav-responsive.active {
+    display: block; /* Torna o menu visível quando a classe 'active' é adicionada */
+}
+
+.nav a, .nav-responsive a {
     font-size: 1.2rem;
     color: var(--text-color);
     padding: 0.5rem 1.5rem;
@@ -345,24 +359,37 @@ footer{
 
 /* menu hamburguer */
 
-.menu-hamburguer{
-    display: none;
+.menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 2rem;
+    height: 1.5rem;
     cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
+.menu-hamburguer div {
     width: 2rem;
-    height: 0.3rem;
+    height: 0.25rem;
     background-color: var(--text-color);
-    margin: 0.4rem 0;
-    transition: 0,3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Quando o hambúrguer é clicado, transforma em X */
+.menu-hamburguer.active .bar1 {
+    transform: rotate(45deg) translateY(0.5rem);
+}
+
+.menu-hamburguer.active .bar2 {
+    opacity: 0;
+}
+
+.menu-hamburguer.active .bar3 {
+    transform: rotate(-45deg) translateY(-0.5rem);
 }
 
 
-
-.nav-responsive{
-    display: none;
-}
 /* menu hamburguer */
 
 
@@ -384,16 +411,17 @@ footer{
 
 /* Extra Small (xs): Smartphone (portrait) */
 
+/* Mobile First Approach (min-width: 0px) */
 @media (min-width: 0px) {
     .menu-hamburguer {
         display: block;
     }
 
-    .nav{
+    .nav {
         display: none;
     }
 
-    .nav-responsive{
+    .nav-responsive a {
         display: block;
         font-size: 1.2rem;
         margin: 0.5rem 0;
@@ -437,15 +465,13 @@ footer{
         width: 100%;
     }
 
-    header{
+    header {
         background-color: var(--color-01); /*TEST*/
     }
 }
 
 /* Small (sm): Smartphone (Landscape) */
-
 @media (min-width: 576px) {
-
     .home-img, .about-img {
         width: 65%;
         max-width: 65%;
@@ -456,26 +482,18 @@ footer{
         width: 70%;
     }
 
-    header{
+    header {
         background-color: var(--color-02); /*TEST*/
     }
 }
 
 /* Medium (md): Tablet */
-
-@media (min-width: 768px) {
-
-    
-
-    .menu-hamburguer{
+@media (min-width: 840px) {
+    .menu-hamburguer {
         display: none;
     }
 
-    img {
-        border: 1px solid green;
-    }
-
-    .nav{
+    .nav {
         display: block;
     }
 
@@ -484,7 +502,7 @@ footer{
     }
 
     .home, .about {
-        flex-direction: row ;
+        flex-direction: row;
         justify-content: space-evenly;
     }
 
@@ -496,12 +514,12 @@ footer{
         width: 50%;
     }
 
-    .services-box{
+    .services-box {
         width: 60%;
         margin-bottom: 2rem;
     }
 
-    .portifolio-container{
+    .portifolio-container {
         grid-template-columns: auto auto;
     }
 
@@ -509,25 +527,24 @@ footer{
         width: 49%;
     }
 
-    header{
+    header {
         background-color: var(--color-03); /*TEST*/
     }
 }
 
 /* Large (lg): Laptop */
 @media (min-width: 992px) {
-    .services-container{
+    .services-container {
         flex-direction: row;
         gap: 1.2rem;
     }
 
-
-    header{
+    header {
         background-color: var(--color-04); /*TEST*/
     }
 }
-/*Extra large (XL): Desktop  */
 
+/* Extra Large (XL): Desktop */
 @media (min-width: 1200px) {
     .home-img, .about-img {
         max-width: 25%;
@@ -536,6 +553,7 @@ footer{
     .home-content h1 {
         font-size: 2.7rem;
     }
+
     .home-content h3 {
         font-size: 2rem;
     }
@@ -544,8 +562,9 @@ footer{
         grid-template-columns: auto auto auto;
     }
 
-    header{
+    header {
         background-color: var(--color-05); /*TEST*/
     }
 }
+
 
