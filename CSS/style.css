@@ -46,7 +46,7 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    border: solid 1px var(--color-02); /*TEST*/
+    
 }
 
 .logo{
@@ -75,7 +75,7 @@ header{
     color: var(--text-color);
     padding: 0.5rem 1.5rem;
     transition: 0.4s;
-    border: solid 1px var(--color-02); /*TEST*/
+    
 }
 
 .nav a:hover {
@@ -85,7 +85,7 @@ header{
 section {
     min-height: 100vh;
     padding: 6rem 6rem 2rem;
-    border: solid 1px var(--color-02); /*TEST*/
+    
 }
 
 span{
@@ -150,6 +150,7 @@ span{
     font-size: 2.2rem;
     margin: 1rem;
     text-align: center;
+    
 }
 
 .services-container {
@@ -295,9 +296,7 @@ form .input-box input, form textarea {
     background-color: var(--bg-color-02);
     border-radius: 0.5rem;
     margin: 0.4rem 0 ;
-
-
-    
+    color: var(--text-color);
 }
 
 form textarea { 
@@ -473,9 +472,7 @@ footer{
         width: 100%;
     }
 
-    header {
-        background-color: var(--color-01); /*TEST*/
-    }
+    
 }
 
 /* Small (sm): Smartphone (Landscape) */
@@ -490,9 +487,7 @@ footer{
         width: 70%;
     }
 
-    header {
-        background-color: var(--color-02); /*TEST*/
-    }
+   
 }
 
 /* Medium (md): Tablet */
@@ -535,9 +530,7 @@ footer{
         width: 49%;
     }
 
-    header {
-        background-color: var(--color-03); /*TEST*/
-    }
+    
 }
 
 /* Large (lg): Laptop */
@@ -547,9 +540,7 @@ footer{
         gap: 1.2rem;
     }
 
-    header {
-        background-color: var(--color-04); /*TEST*/
-    }
+    
 }
 
 /* Extra Large (XL): Desktop */
@@ -570,9 +561,7 @@ footer{
         grid-template-columns: auto auto auto;
     }
 
-    header {
-        background-color: var(--color-05); /*TEST*/
-    }
+    
 }
 
 
