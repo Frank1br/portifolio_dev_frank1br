@@ -363,3 +363,21 @@ footer{
 }
 /* menu hamburguer */
 
+/* Extra Small (xs): Smartphone (portrait) */
+
+@media (min-width: 0px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .header{
+        background-color: var(--color-01); /*TEST*/
+    }
+}
+
+/* Small (sm): Smartphone (Landscape) */
+
