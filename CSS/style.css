@@ -239,7 +239,7 @@ a {
     flex-direction: column;
     text-align: center;
     padding: 0 2rem;
-    background: linear-gradient(transparent, var(--main-color));
+    background: linear-gradient(transparent, var(--bg-color-01));
     transform: translateY(100%);
     transition: transform 0.5s ease;
 }
